@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function fn1(a) {
+            var arr=[]
+            document.getElementById("res").innerHTML = arr;
+            a=parseInt(a)
+            
+            if(a<0){
+                document.getElementById("res").innerHTML = "Negative number";
+            }
+            if(a>=0){
+                for(let i=0;i<3;i++){
+                    a+=2
+                    arr.push(a)
+                }
+                document.getElementById("res").innerHTML = arr;
+            }
+        }
+      </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter a number</h1>
+  
+    <input type="number" onkeyup="fn1(this.value)">
+    
+    <br>
+    <p id="res"></p>
+    </div>
+  </body>
+</html>
